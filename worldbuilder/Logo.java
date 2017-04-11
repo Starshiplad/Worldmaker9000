@@ -18,7 +18,7 @@ public class Logo extends JPanel {
 		catch(IOException e){
 			
 		}
-		setPreferredSize(new Dimension(64,64));
+		setPreferredSize(new Dimension(500,250));
 	}
 	public void paint (Graphics g){
 		g.drawImage(logo,0,0,null);

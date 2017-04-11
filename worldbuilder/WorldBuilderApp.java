@@ -1,6 +1,8 @@
 package worldbuilder;
 import java.awt.GridLayout;
 import java.awt.LayoutManager;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.*;
 
@@ -10,7 +12,7 @@ import javax.swing.*;
  * @author StarshipladDev
  * @version 1.0
  */
-public class WorldBuilderApp {
+public class WorldBuilderApp{
 
 	static final long serialVersionUID= 0;
 	/**
@@ -21,14 +23,20 @@ public class WorldBuilderApp {
 	public static void main(String[] args) {
 		DicePanel dicePanel= new DicePanel(500,500);
 		Logo logo= new Logo();
+		MapPanel mapPanel= new MapPanel();
 		JFrame worldFrame= new JFrame("WorldBuilder9000");
-		worldFrame.setSize(750,1000);
-		worldFrame.setLayout(new GridLayout(3,2));
+		worldFrame.setSize(1000,750);
+		worldFrame.setLayout(new GridLayout(2,2));
 		worldFrame.add(dicePanel);
+		worldFrame.add(mapPanel);
 		worldFrame.add(logo);
+		mapPanel.setFocusable(true);
 		worldFrame.pack();
 		worldFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		worldFrame.setVisible(true);
-	}
 
+		
+		
+	}
+	
 }
